@@ -3,9 +3,9 @@ import { defineConfig, Options } from 'tsup'
 export default defineConfig({
   entry: ['src/index.ts'],
   splitting: false,
-  sourcemap: true,
+  sourcemap: false,
   clean: true,
-	minify: true,
+	minify: false,
   target: 'node18',
   format: ['cjs', 'esm'],
 } satisfies Options)
