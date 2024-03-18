@@ -1,0 +1,44 @@
+{
+  "name": "vite-plugin-base64",
+  "version": "0.1.1",
+  "description": "Create base64 data URLs from static files",
+  "keywords": [],
+  "author": "knd775",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "types"
+  ],
+  "scripts": {
+    "dev": "tsup-node --sourcemap --watch src",
+    "build": "tsup-node --dts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "file-type": "^19.0.0"
+  },
+  "peerDependencies": {
+    "vite": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.19.24",
+    "prettier": "^3.2.5",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.2",
+    "vite": "^5.1.6"
+  }
+}
