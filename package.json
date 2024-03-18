@@ -4,6 +4,7 @@
   "description": "Create base64 data URLs from static files",
   "keywords": [],
   "author": "knd775",
+  "repository": "github:knd775/vite-plugin-base64",
   "license": "MIT",
   "type": "module",
   "main": "dist/index.cjs",
