@@ -2,18 +2,11 @@ import { fileTypeFromBuffer } from 'file-type';
 import fs from 'fs';
 import type { Plugin } from 'vite';
 
-export const base64 = async (): Promise<Plugin<any>> => {
+export const base64 = async (): Promise<Plugin> => {
   return  {
     name: 'vite-plugin-base64',
     enforce: 'pre' as const,
-    resolveId: (id: string) => {
-      const [path, query] = id.split('?');
-      if (query == 'base64') {
-        return path;
-      }
-      return null;
-    },
-    transform: async (_: any, id: string) => {
+    load: async (id: string) => {
       const [path, query] = id.split('?');
 
       if (query != 'base64' || !path) return null;
