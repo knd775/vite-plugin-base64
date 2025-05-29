@@ -33,7 +33,7 @@
     "file-type": "^21.0.0"
   },
   "peerDependencies": {
-    "vite": "^5.0.0"
+    "vite": "^6.0.0"
   },
   "devDependencies": {
     "@types/node": "^22.15.24",
